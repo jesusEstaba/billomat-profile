@@ -1,0 +1,25 @@
+{
+  "name": "billomat-profile",
+  "version": "1.0.0",
+  "description": "Billomat profile microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesusEstaba/billomat-profile.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Jesus Estaba",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jesusEstaba/billomat-profile/issues"
+  },
+  "homepage": "https://github.com/jesusEstaba/billomat-profile#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
