@@ -4,6 +4,7 @@
   "description": "Billomat profile microservice",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,8 @@
   },
   "homepage": "https://github.com/jesusEstaba/billomat-profile#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.3.0"
   }
 }
