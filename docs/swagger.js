@@ -13,7 +13,7 @@ const spec = {
             },
         ],
     },
-    apis: [`${path.join(__dirname, '../src/Router.js')}`],
+    apis: [`${path.join(__dirname, '../src/routes/Router.js')}`],
 };
 
 module.exports = {
