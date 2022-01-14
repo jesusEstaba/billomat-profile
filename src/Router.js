@@ -1,6 +1,6 @@
 const express = require('express');
-const router = express.Router();
 
+const router = express.Router();
 const UserController = require('./controllers/UserController');
 
 /**
@@ -95,7 +95,7 @@ const UserController = require('./controllers/UserController');
  *                      schema:
  *                          type: array
  *                          items:
- *                              $ref: '#/components/schemas/User'             
+ *                              $ref: '#/components/schemas/User'
  */
 router.get('/', UserController.all);
 
@@ -125,7 +125,7 @@ router.get('/', UserController.all);
  *                  application/json:
  *                      schema:
  *                          type: object
- *                          $ref: '#/components/schemas/UserNotFound'           
+ *                          $ref: '#/components/schemas/UserNotFound'
  */
 router.get('/:id', UserController.find);
 
@@ -200,7 +200,7 @@ router.post('/', UserController.create);
  *                  application/json:
  *                      schema:
  *                          type: object
- *                          $ref: '#/components/schemas/UserNotFound'           
+ *                          $ref: '#/components/schemas/UserNotFound'
  */
 router.put('/:id', UserController.update);
 
@@ -230,7 +230,7 @@ router.put('/:id', UserController.update);
  *                  application/json:
  *                      schema:
  *                          type: object
- *                          $ref: '#/components/schemas/UserNotFound'           
+ *                          $ref: '#/components/schemas/UserNotFound'
  */
 router.delete('/:id', UserController.destroy);
 

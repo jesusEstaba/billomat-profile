@@ -1,20 +1,21 @@
-const path = require('path')
+const path = require('path');
+
 const spec = {
     definition: {
         openapi: '3.0.0',
         info: {
             title: 'Billomat Profile',
-            version: '1.0.0'
+            version: '1.0.0',
         },
         servers: [
             {
-                url: 'http://localhost:3000'
-            }
-        ]
+                url: 'http://localhost:3000',
+            },
+        ],
     },
-    apis: [`${path.join(__dirname, '../src/Router.js')}`]
-}
+    apis: [`${path.join(__dirname, '../src/Router.js')}`],
+};
 
 module.exports = {
-    spec
-}
+    spec,
+};

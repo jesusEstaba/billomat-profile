@@ -1,53 +1,52 @@
-
-function all(_, res, _) {
+function all(_, res) {
     return res.json({
         data: [
             {
-                id: "PI31416",
+                id: 'PI31416',
                 name: 'Joe Doe',
                 age: 22,
                 bio: 'A very special guy',
-                image: 'http://profile-billomat.s3.amazonaws.com/joe_doe_image_profile.png'
-            }
-        ]
+                image: 'http://profile-billomat.s3.amazonaws.com/joe_doe_image_profile.png',
+            },
+        ],
     });
 }
 
-function find(req, res, _) {
+function find(req, res) {
     return res.json({
-        id: "PI31416",
+        id: 'PI31416',
         name: 'Joe Doe',
         age: 22,
         bio: 'A very special guy',
-        image: 'http://profile-billomat.s3.amazonaws.com/joe_doe_image_profile.png'
+        image: 'http://profile-billomat.s3.amazonaws.com/joe_doe_image_profile.png',
     });
 }
 
-function create(req, res, _) {
+function create(req, res) {
     res.status(201);
 
     return res.json({
-        id: "PI31416",
+        id: 'PI31416',
         name: 'Joe Doe',
         age: 22,
         bio: 'A very special guy',
-        image: 'http://profile-billomat.s3.amazonaws.com/joe_doe_image_profile.png'
+        image: 'http://profile-billomat.s3.amazonaws.com/joe_doe_image_profile.png',
     });
 }
 
-function update(req, res, _) {
+function update(req, res) {
     res.status(204);
 
     return res.json({
-        message: 'User updated successfully'
+        message: 'User updated successfully',
     });
 }
 
-function destroy(req, res, _) {
+function destroy(req, res) {
     res.status(204);
 
     return res.json({
-        message: 'User deleted successfully'
+        message: 'User deleted successfully',
     });
 }
 
@@ -56,5 +55,5 @@ module.exports = {
     find,
     create,
     update,
-    destroy
-}
+    destroy,
+};
