@@ -10,7 +10,7 @@ const UserController = require('../controllers/UserController');
  *      User:
  *          type: object
  *          properties:
- *              id:
+ *              _id:
  *                  type: string
  *              name:
  *                  type: string
@@ -21,7 +21,7 @@ const UserController = require('../controllers/UserController');
  *              image:
  *                  type: string
  *          exampĺe:
- *              id: PI31416
+ *              _id: 000000000000000000000001
  *              name: Joe Doe
  *              age: 22
  *              bio: A very special guy
@@ -60,20 +60,6 @@ const UserController = require('../controllers/UserController');
  *                  type: string
  *          example:
  *              message: User not found
- *      UserUpdated:
- *          type: object
- *          properties:
- *              message:
- *                  type: string
- *          example:
- *              message: User updated successfully
- *      UserDeleted:
- *          type: object
- *          properties:
- *              message:
- *                  type: string
- *          example:
- *              message: User deleted successfully
  *      GenericMessage:
  *          type: object
  *          properties:
@@ -182,11 +168,6 @@ router.post('/', UserController.create);
  *      responses:
  *          204:
  *              description: User updated
- *              content:
- *                  application/json:
- *                      schema:
- *                          type: object
- *                          $ref: '#/components/schemas/UserUpdated'
  *          400:
  *              description: Invalid body fields
  *              content:
@@ -219,11 +200,6 @@ router.put('/:id', UserController.update);
  *      responses:
  *          204:
  *              description: User deleted
- *              content:
- *                  application/json:
- *                      schema:
- *                          type: object
- *                          $ref: '#/components/schemas/UserDeleted'
  *          404:
  *              description: User not found
  *              content:
