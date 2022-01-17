@@ -2,6 +2,8 @@ const express = require('express');
 
 const router = express.Router();
 const UserController = require('../controllers/UserController');
+const CreateUserValidator = require('../validators/CreateUserValidator');
+const UpdateUserValidator = require('../validators/UpdateUserValidation');
 
 /**
  * @swagger
@@ -149,7 +151,7 @@ router.get('/:id', UserController.find);
  *                          type: object
  *                          $ref: '#/components/schemas/GenericMessage'
  */
-router.post('/', UserController.create);
+router.post('/', CreateUserValidator.validate(), UserController.create);
 
 /**
  * @swagger
@@ -188,7 +190,7 @@ router.post('/', UserController.create);
  *                          type: object
  *                          $ref: '#/components/schemas/UserNotFound'
  */
-router.put('/:id', UserController.update);
+router.put('/:id', UpdateUserValidator.validate(), UserController.update);
 
 /**
  * @swagger

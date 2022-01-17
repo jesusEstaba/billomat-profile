@@ -1,9 +1,11 @@
 const express = require('express');
+const expressValidator = require('express-validator');
 
 // express settings
 const app = express();
 
 app.use(express.json());
+app.use(expressValidator());
 
 // routes
 const UserRouter = require('./routes/UserRouter');

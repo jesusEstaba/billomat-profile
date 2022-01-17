@@ -1,3 +1,4 @@
+const { validationResult } = require('express-validator/check');
 const UserRepository = require('../repositories/UserRepository');
 
 async function all(_, res) {
@@ -21,6 +22,14 @@ async function find(req, res) {
 }
 
 async function create(req, res) {
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+        const error = errors.array()[0];
+
+        return res.status(400).json({ message: `${error.msg}: ${error.param}` });
+    }
+
     const {
         name,
         age,
@@ -41,6 +50,14 @@ async function create(req, res) {
 }
 
 async function update(req, res) {
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+        const error = errors.array()[0];
+
+        return res.status(400).json({ message: `${error.msg}: ${error.param}` });
+    }
+
     const user = await UserRepository.findOrNull(req.params.id);
 
     if (user == null) {
