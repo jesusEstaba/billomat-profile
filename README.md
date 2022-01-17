@@ -9,6 +9,7 @@ A Rest API to handle user profile information builded on NodeJs.
 
 ## Run with docker
 ```
+cp .env.docker.exmaple .env
 docker-compose up -d
 ```
 >To verify if the application is running You could call to `http://localhost:3000/ping`. If the response is `{message: 'pong'}` the application is healthy!
@@ -17,7 +18,7 @@ docker-compose up -d
 
 Requirements: `node v14`, `npm 6` & `mongodb`.
 ```
-cp .env.exmaple .env
+cp .env.local.exmaple .env
 npm install
 npm start
 ```
