@@ -50,10 +50,21 @@ function remove(user) {
     user.remove();
 }
 
+async function getAverageAge() {
+    const agreggator = await User.aggregate([{ $group: { _id: '_id', averageAge: { $avg: '$age' } } }]);
+
+    if (agreggator.length === 0) {
+        return 0;
+    }
+
+    return agreggator[0].averageAge;
+}
+
 module.exports = {
     all,
     findOrNull,
     save,
     update,
     remove,
+    getAverageAge,
 };

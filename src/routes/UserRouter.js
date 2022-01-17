@@ -37,6 +37,11 @@ const UserController = require('../controllers/UserController');
  *                  type: string
  *              image:
  *                  type: string
+ *          example:
+ *              name: Joe Doe
+ *              age: 22
+ *              bio: A very special guy
+ *              image: http://profile-billomat.s3.amazonaws.com/joe_doe_image_profile.png
  *          required:
  *              - name
  *              - age
