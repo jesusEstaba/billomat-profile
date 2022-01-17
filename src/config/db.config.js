@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 
 const {
     DB_USER,
@@ -6,8 +6,8 @@ const {
     DB_HOST,
     DB_PORT,
     DB_NAME,
-  } = process.env;
-  
+} = process.env;
+
 module.exports = {
-    mongo_uri: `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?authSource=admin`
+    mongoUri: `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?authSource=admin`,
 };

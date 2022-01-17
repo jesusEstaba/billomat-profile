@@ -1,14 +1,16 @@
 /* eslint-disable no-console */
-// MongoDB connection
-const { mongo_uri } = require('./src/config/db.config')
-const mongoose = require('mongoose');
 
-mongoose.connect(mongo_uri);
+const mongoose = require('mongoose');
 
 // Swagger
 const swaggerUI = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
 const { spec } = require('./docs/swagger');
+
+// MongoDB connection
+const { mongoUri } = require('./src/config/db.config');
+
+mongoose.connect(mongoUri);
 
 // Http server
 const { app } = require('./src/server');
