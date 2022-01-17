@@ -2,7 +2,6 @@ const express = require('express');
 
 // express settings
 const app = express();
-const PORT = 3000;
 
 app.use(express.json());
 
@@ -15,5 +14,4 @@ app.use('/api/v1/users', Router);
 
 module.exports = {
     app,
-    PORT,
 };

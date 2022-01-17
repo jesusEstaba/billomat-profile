@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/jesusEstaba/billomat-profile#readme",
   "dependencies": {
+    "dotenv": "^13.0.1",
     "express": "^4.17.2",
     "mongoose": "^6.1.6",
     "swagger-jsdoc": "^6.1.0",
